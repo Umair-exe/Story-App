@@ -19,7 +19,7 @@ const AddPosts = () => {
         }
        
         try {
-            const res = await axios.post('http://localhost:5000/posts/create',data , {
+            const res = await axios.post('https://post-app-server-1.herokuapp.com/posts/create',data , {
                 headers: {
                     "x-auth-token": localStorage.getItem("x-auth-token"),
                 }
