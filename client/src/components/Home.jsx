@@ -22,7 +22,7 @@ function Home() {
     }, [posts,mount])
 
     const getPosts = async () => {
-        let {data} = await axios.get('http://localhost:5000/posts/', {
+        let {data} = await axios.get('https://post-app-server-1.herokuapp.com/posts/', {
             headers: {
                 "x-auth-token": localStorage.getItem('x-auth-token'),
             }
