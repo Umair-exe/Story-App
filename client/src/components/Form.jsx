@@ -70,7 +70,7 @@ const Form = ({ register }) => {
 
     const handleLogin = async () => {
         try {
-            let res = await axios.post("http://localhost:5000/auth", {
+            let res = await axios.post("https://post-app-server-1.herokuapp.com/auth", {
                 email,
                 password,
             })
