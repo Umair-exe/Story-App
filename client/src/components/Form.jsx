@@ -41,7 +41,7 @@ const Form = ({ register }) => {
 
     const handleRegister = async () => {
         try {
-            const { data: { msg } } = await axios.post('http://localhost:5000/registerUser', {
+            const { data: { msg } } = await axios.post('https://post-app-server-1.herokuapp.com/registerUser', {
                 name,
                 email,
                 password,
