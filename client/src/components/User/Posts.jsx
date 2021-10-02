@@ -9,7 +9,7 @@ const Posts = ({ posts, getPosts }) => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/posts/delete/${id}`, {
+            await axios.delete(`https://post-app-server-1.herokuapp.com/posts/delete/${id}`, {
                 headers: {
                     "x-auth-token": localStorage.getItem('x-auth-token')
                 }
