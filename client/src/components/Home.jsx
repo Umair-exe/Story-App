@@ -43,7 +43,7 @@ function Home() {
                     <h1>Posts</h1>
                     <button onClick={() => {
                         logout();
-                    }} className="btn btn-danger float-right ">Logout</button>
+                    }} className="btn btn-danger float-right " style={{marginTop:"25px"}}>Logout</button>
                 </div>
                 <div>
                     <Link to="/posts/create"> <button className="btn btn-primary float-right">Add New Post </button></Link>

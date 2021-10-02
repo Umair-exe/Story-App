@@ -51,9 +51,15 @@ const Form = ({ register }) => {
             setIsloading(false);
             setPassword('');
             history.push("/login");
+            setTimeout(() => {
+                setMsg(null);
+            }, 5000);
 
         } catch (err) {
             setMsg(err.msg);
+            setTimeout(() => {
+                setMsg(null);
+            }, 5000);
             console.log(err.msg)
         }
     }
@@ -76,11 +82,16 @@ const Form = ({ register }) => {
             }
             else {
                 setMsg(res.msg)
-                return;
+                setTimeout(() => {
+                    setMsg(null);
+                }, 5000);
             }
         } catch (error) {
             if (error) {
                 seterror("incorrect details")
+                setTimeout(() => {
+                    seterror(null);
+                }, 5000);
             }
             console.log(error);
         }
@@ -90,17 +101,13 @@ const Form = ({ register }) => {
     return (
         <div className="container">
             <h1>{register ? "Register" : "Login"}</h1>
-            {msg ? setTimeout(() => {
-                <div className="alert alert-success">
-                    <strong>{msg}</strong>
-                </div>
-            }, 800) : null}
+            {msg ? <div className="alert alert-success">
+                <strong>{msg}</strong>
+            </div> : null}
 
-            {error ? setTimeout(() => (
-                <div className="alert alert-danger">
-                    <strong>{error}</strong>
-                </div>
-            ), 6000) : null}
+            {error ? <div className="alert alert-danger">
+                <strong>{error}</strong>
+            </div> : null}
             <form onSubmit={handleSubmit} >
                 {register && (<div className="form-group">
                     <input className="form-control" type="text" onChange={e => setName(e.target.value)} placeholder="enter name" required />

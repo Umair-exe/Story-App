@@ -15,6 +15,8 @@ const EditPost = () => {
     useEffect(() => {
         fetchdata();
     }, [])
+
+    
     const fetchdata = async () => {
      
 

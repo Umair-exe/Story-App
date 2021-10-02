@@ -31,8 +31,8 @@ const Posts = ({ posts, getPosts }) => {
                 <div key={index} className="card">
                     <div className="container">
                         <div>
-                            <h4><b>{post.title}</b></h4>
-                            <p>{post.body}</p>
+                            <h4 style={{padding:"5px 10px"}}><b>{post.title}</b></h4>
+                            <p style={{padding:"5px 30px"}}>{post.body}</p>
                         </div>
                         <div className="button">
                             <button onClick={() => handleUpdate(post._id)} className="btn btn-warning" style={{marginRight:"5px"}}>Edit</button>

@@ -19,8 +19,10 @@ function App() {
           <AddPosts />
         </Route>
         <Route exact path="/">
-          <Link to="/register" className="btn btn-primary">Register</Link>
-          <Link to="/login" className="btn btn-danger">Login</Link>
+          <div className="main">
+            <Link to="/register" style={{marginRight:"10px"}} className="btn btn-primary btn-lg">Register</Link>
+            <Link to="/login" className="btn btn-danger btn-lg">Login</Link>
+          </div>
         </Route>
         <Route exact path="/register">
           <Form register={true} />
