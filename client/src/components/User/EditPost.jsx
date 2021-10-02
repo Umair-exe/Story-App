@@ -20,7 +20,7 @@ const EditPost = () => {
     const fetchdata = async () => {
      
 
-        let res = await axios.get(`http://localhost:5000/posts/${id}` , {
+        let res = await axios.get(`https://post-app-server-1.herokuapp.com/posts/${id}` , {
             headers: {
                 'x-auth-token': localStorage.getItem("x-auth-token")
             }
@@ -43,7 +43,7 @@ const EditPost = () => {
         }
 
         try {
-            const res = await axios.put(`http://localhost:5000/posts/${id}`, data, {
+            const res = await axios.put(`https://post-app-server-1.herokuapp.com/posts/${id}`, data, {
                 headers: {
                     "x-auth-token": localStorage.getItem("x-auth-token"),
                 }
